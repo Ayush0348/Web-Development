@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on css selector</title>
+    <style>
+h1{
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+/* div li p{                if p is contained by an li which is contained by div
+    
+    color: yellow;
+    background-color: green;
+    font-weight: bold;
+} */
+
+ /* div > p{      
+    background-color: green;
+    font-weight: bold;
+     color: yellow;
+}  */   
+/*  direct/next element after div should be p then condition is satisfied */
+
+div + p{           /* Previous sibling of p is div*/
+    color: white;
+    background-color: rgb(231, 166, 166);
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>This is more on css selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph</p></li>
+                <li>this will not get affected</li>
+            </ul>
+            <p>This is a Paragrph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>

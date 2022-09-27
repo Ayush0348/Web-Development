@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /* Initialize the container as a flex box */
+            display: flex;
+            /* Flex properties for flex container */
+            /********************************/
+            flex-direction: row;
+            /*  (by default)
+    flex-direction: column;
+    flex-direction: row-reverse;   start filling from right side
+    flex-direction: column-reverse;  start filling from bottom to up*/
+            /***********************************/
+            /*  flex-wrap: wrap;
+            start wrapping from top to bottom  */
+            /* flex-wrap: wrap-reverse;
+            wrapping from bottom to top*/
+            /**********************************/
+            /* flex-flow: row-reverse wrap;
+             wrap and direction together shorcut*/
+            /**********************************/
+            /*justify-content: center*/
+            /*justify-content: space-between;  Equal space between boxes*/
+            /*justify-content: space-evenly;   Equal spaces between boxes from start and end */
+            /*justify-content: space-around;  Equal distance between boxes and same space in front and end but different from space between them..*/
+            /**********************************/
+            /*align-items: center; boxes in center of container*/
+            /*align-items: flex-end; align in bottom */
+            /*align-items: flex-start; align in top (Default) */
+            /*align-items: stretch; Equal distance between boxes*/
+
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1 {
+            /*Flex properties for a flex item */
+            /*order is value in which box is shows up in the container.
+            Higher the order, later it shows up in the container.*/
+
+            /* order: 2; 
+          **********************************/
+
+            /*flex-grow: 2; will take more space when screen size is increased*/
+            /*flex-shrink: 2; will take Less space when Screen size is increased*/
+            
+        }
+
+        #item-2 {
+            /*When flex direction is set to row flex basis: will control width */
+            /*When flex direction is set to column flex basis: will control height */
+            flex-basis: 320px;}
+
+        #item-3 {
+            flex: 2 2 300px; /*shortcut for flex-grow,flex-shrink,flex-basis */
+
+            align-self: flex-end; /*At the end of flex*/
+            align-self: center; /*At the center of flex*/
+            align-self: flex-start; /*At the start of flex*/
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <!-- div.item#item-$*6 -->
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <!-- <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div> -->
+    </div>
+</body>
+
+</html>
